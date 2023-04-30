@@ -12,6 +12,11 @@ html, body {
     padding-right: 30px;
     margin-top: 40px;
     margin-bottom: 0px;
+    
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .mat-toolbar-row{
@@ -37,8 +42,17 @@ html, body {
 }
 
 .tab-nav-menu{
+    background-color: white;
     padding-right: 30px;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 60px;
+    z-index: 1000;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-decoration: none;
+    font-size: 1.2rem;
 }
+
 
 .mat-tab-link > span{
     color: #1E1E1E;
