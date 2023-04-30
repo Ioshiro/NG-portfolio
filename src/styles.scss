@@ -9,10 +9,35 @@
 // Be sure that you only ever include this mixin once!
 @include mat.core();
 
+$ng-black-palette: (
+  50: #f9f9f9,
+  100: #f4f4f4,
+  200: #ececec,
+  300: #dddddd,
+  400: #b9b9b9,
+  500: #9a9a9a,
+  600: #717171,
+  700: #5d5d5d,
+  800: #3f3f3f,
+  900: #1e1e1e,
+  contrast: (
+    50: rgba(black, 0.87),
+    100: rgba(black, 0.87),
+    200: rgba(black, 0.87),
+    300: white,
+    400: white,
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white
+  )
+);
+
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
- $NG-portfolio-primary: mat.define-palette(mat.$gray-palette);
+ $NG-portfolio-primary: mat.define-palette($ng-black-palette, 900, 100, 700);
 // (
 //   50: #f9f9f9,
 //   100: #f4f4f4,
@@ -38,7 +63,7 @@
 //     // ... continues to 900
 //   )
 //  );
-$NG-portfolio-accent:mat.define-palette(mat.$gray-palette);
+$NG-portfolio-accent:mat.define-palette($ng-black-palette, 900, 100, 700);
 //  (
 //   50: #fff8e1,
 //   100: #ffecb3,

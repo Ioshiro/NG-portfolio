@@ -4,11 +4,19 @@
     <span class="label-toolbar-title">NADEZDA<br>GOLYSHEVA</span>
   </mat-toolbar-row>
 </mat-toolbar>
-    <nav mat-tab-nav-bar class="tab-nav-menu" mat-stretch-tabs="false" mat-align-tabs="end">
-      <a mat-tab-link class="tab-nav-menu__link"
-      *ngFor="let link of navLinks"
-      [routerLink]="link.link"
-      routerLinkActive #rla="routerLinkActive"
-      [active]="rla.isActive">{{link.label}}</a>
-    </nav>
-<router-outlet></router-outlet>
+<nav 
+  mat-tab-nav-bar class="tab-nav-menu" 
+  mat-stretch-tabs="false" 
+  mat-align-tabs="end" 
+  [tabPanel]="tabPanel" 
+  disableRipple="true">
+    <span mat-tab-link
+    appearance="none"
+    *ngFor="let link of navLinks"
+    [routerLink]="link.link"
+    routerLinkActive #rla="routerLinkActive"
+    [active]="rla.isActive">{{link.label}}</span>
+</nav>
+<mat-tab-nav-panel #tabPanel>
+  <router-outlet></router-outlet>
+</mat-tab-nav-panel>
