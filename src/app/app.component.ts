@@ -10,7 +10,8 @@ import { MatSidenav } from '@angular/material/sidenav';
 })
 export class AppComponent implements OnInit  {
   title = 'ng-portfolio';
-  hideSideMenu = true;  
+  hideSideMenu = true;
+  isSmallScreen = false;  
   navLinks: any[];
   activeLinkIndex = -1; 
   constructor(private router: Router,  private responsive: BreakpointObserver) {
@@ -52,13 +53,15 @@ ngOnInit(): void {
     .subscribe(result => {
 
       const breakpoints = result.breakpoints;
-
+      
       if (breakpoints[Breakpoints.HandsetPortrait] || breakpoints[Breakpoints.HandsetLandscape]) {
         console.log("screens matches TabletPortrait");
+        this.isSmallScreen = true;
         this.hideSideMenu = false;
       }
       else if (breakpoints[Breakpoints.WebLandscape] || breakpoints[Breakpoints.TabletLandscape]) {
         console.log("screens matches HandsetLandscape");
+        this.isSmallScreen = false;
         this.hideSideMenu = true;
       }
   });
