@@ -17,12 +17,12 @@ export class AppComponent implements OnInit  {
   constructor(private router: Router,  private responsive: BreakpointObserver) {
     this.navLinks = [
         {
-            label: 'Home',
+            label: 'Shows',
             link: './home',
             index: 0
         }, {
-            label: 'Shows',
-            link: './shows',
+            label: 'Works',
+            link: './works',
             index: 1
         }, {
             label: 'Portfolio',

@@ -1,5 +1,23 @@
 <div class="container-home">
-    <div class="main-left">
+    <mat-grid-list cols="1" rowHeight="2:1">
+        <mat-grid-tile 
+        class="tile-home"
+        *ngFor="let link of navLinks"
+        >
+        <mat-card>
+            <a href="{{link.link}}">
+                <img mat-card-image class="immagine-locandina" src="{{link.img}}" alt="Works Thumbnail">
+                <mat-card-content>
+                <span class="link-description">
+                    {{link.label}}
+                </span>
+                </mat-card-content>
+            </a>
+        </mat-card>
+        </mat-grid-tile>  
+    </mat-grid-list>
+      
+    <!-- <div class="main-left">
         <img src="assets/locandina-main.png" alt="image" class="immagine-locandina">
     </div>
     <div class="main-right">
@@ -20,5 +38,5 @@
         lagunare, hanno qualcosa dell’archeologico e del transitorio. Mostrano il presente come un’epoca già passata,
          relativizzando la nostra presunta contemporaneità in calchi e ritrovamenti che si mostrano come quelli ormai celebri e drammatici di Pompei.</p>
     <p class="label-home-footer">Gabriele Salvaterra</p>
-    </div>
+    </div> -->
 </div>
